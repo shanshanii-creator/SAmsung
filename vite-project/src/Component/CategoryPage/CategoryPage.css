@@ -1,0 +1,129 @@
+.category-page {
+  padding-top: var(--navbar-height);
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.category-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.category-header {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.back-btn {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: var(--samsung-blue);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.back-btn:hover {
+  transform: translateX(-5px);
+}
+
+.category-header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -2px;
+}
+
+.category-header p {
+  font-size: 1.25rem;
+  color: var(--samsung-gray-500);
+}
+
+/* Grid */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Card */
+.category-card {
+  background-color: var(--samsung-gray-100);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+  background-color: #fff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.cat-card-image {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.cat-card-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.category-card:hover .cat-card-image img {
+  transform: scale(1.1);
+}
+
+.cat-card-info {
+  padding: 2rem;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cat-card-info h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.cat-price {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--samsung-blue);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.cat-buy-btn {
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  background-color: var(--samsung-black);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cat-buy-btn:hover {
+  background-color: var(--samsung-blue);
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .category-header h1 {
+    font-size: 2.5rem;
+  }
+}

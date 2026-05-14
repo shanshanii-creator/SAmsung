@@ -1,0 +1,353 @@
+.ai-banner {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-top: var(--navbar-height);
+}
+
+.ai-banner-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Background Effects */
+.bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(3, 78, 162, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: 1;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: float-particle 10s infinite linear;
+}
+
+@keyframes float-particle {
+  0% { transform: translateY(100vh) translateX(0); }
+  100% { transform: translateY(-100px) translateX(30px); }
+}
+
+/* Grid Layout */
+.banner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Text Styling */
+.event-badge {
+  display: inline-block;
+  padding: 0.6rem 1.8rem;
+  background: linear-gradient(90deg, #034ea2, #00c6ff);
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin-bottom: 2rem;
+  letter-spacing: 3px;
+  box-shadow: 0 0 20px rgba(3, 78, 162, 0.4);
+}
+
+.glitch-text {
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  font-weight: 900;
+  line-height: 0.9;
+  margin-bottom: 1.5rem;
+  position: relative;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #fff 0%, #aaa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.banner-text h2 {
+  font-size: 2.25rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.banner-text p {
+  font-size: 1.125rem;
+  max-width: 550px;
+  margin-bottom: 2.5rem;
+  color: #a0a0a0;
+  line-height: 1.6;
+}
+
+/* Actions */
+.banner-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.btn-ai {
+  padding: 1.1rem 2.8rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.btn-glow {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.btn-glow:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Ecosystem Visuals */
+.banner-ecosystem {
+  position: relative;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecosystem-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.device {
+  position: absolute;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  transition: all 0.5s ease;
+}
+
+.device img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TV Styling */
+.tv-device {
+  width: 500px;
+  height: 300px;
+  top: 15%;
+  right: 5%;
+  z-index: 3;
+  animation: float-tv 8s ease-in-out infinite;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes float-tv {
+  0%, 100% { transform: translate(0, 0) rotate(1deg); }
+  50% { transform: translate(-10px, -15px) rotate(-1deg); }
+}
+
+/* Model Styling */
+.model-device {
+  width: 320px;
+  height: 480px;
+  top: 25%;
+  left: 10%;
+  z-index: 5;
+  animation: float-model 6s ease-in-out infinite;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes float-model {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(15px, -20px); }
+}
+
+/* Phone Styling */
+.phone-device {
+  width: 140px;
+  height: 280px;
+  bottom: 10%;
+  right: 25%;
+  z-index: 7;
+  animation: float-phone 5s ease-in-out infinite;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes float-phone {
+  0%, 100% { transform: translate(0, 0) rotate(-2deg); }
+  50% { transform: translate(-5px, -25px) rotate(2deg); }
+}
+
+/* Hologram Scan Animation */
+.hologram-scan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(3, 78, 162, 0.3), transparent);
+  background-size: 100% 10px;
+  z-index: 10;
+  pointer-events: none;
+  animation: scan-line 4s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* Data Lines (Connections) */
+.data-line {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, #00c6ff, transparent);
+  height: 1px;
+  z-index: 4;
+  opacity: 0.3;
+}
+
+.line-1 {
+  width: 200px;
+  top: 30%;
+  left: 35%;
+  transform: rotate(-20deg);
+  animation: pulse-line 3s infinite;
+}
+
+.line-2 {
+  width: 150px;
+  bottom: 35%;
+  right: 35%;
+  transform: rotate(45deg);
+  animation: pulse-line 3s infinite 1.5s;
+}
+
+@keyframes pulse-line {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.5; }
+}
+
+/* Floating Elements */
+.ecosystem-orb {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  z-index: 2;
+  filter: blur(20px);
+}
+
+.ui-1, .ui-2 {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  z-index: 8;
+}
+
+.ui-1 { width: 140px; height: 50px; top: 15%; left: 0; animation: float-ui 4s infinite; }
+.ui-2 { width: 100px; height: 100px; bottom: 15%; right: 5%; animation: float-ui 6s infinite reverse; }
+
+@keyframes float-ui {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(10px, -15px); }
+}
+
+/* AI Features */
+.ai-features {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .tv-device { width: 400px; height: 240px; }
+  .model-device { width: 280px; height: 420px; }
+  .phone-device { width: 120px; height: 240px; }
+}
+
+@media (max-width: 1024px) {
+  .banner-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .banner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  .banner-actions, .ai-features {
+    justify-content: center;
+  }
+
+  .banner-ecosystem {
+    height: 500px;
+    width: 100%;
+  }
+
+  .ecosystem-wrapper {
+    transform: scale(0.8);
+  }
+}

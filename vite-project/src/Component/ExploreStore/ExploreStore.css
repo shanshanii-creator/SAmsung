@@ -1,0 +1,196 @@
+.explore-store {
+  padding: 8rem 4rem;
+  background-color: var(--samsung-gray-100);
+}
+
+.section-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.explore-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+  gap: 2rem;
+}
+
+.explore-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--samsung-black);
+  letter-spacing: -2px;
+}
+
+.filter-tags {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.5rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.filter-tag {
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  border: 1px solid var(--samsung-gray-200);
+  background: #fff;
+  color: var(--samsung-black);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.filter-tag:hover {
+  background-color: var(--samsung-gray-200);
+}
+
+.filter-tag.active {
+  background-color: var(--samsung-black);
+  color: #fff;
+  border-color: var(--samsung-black);
+}
+
+/* Explore Grid */
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.explore-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.explore-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.explore-card-image {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.explore-card-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.explore-card:hover .explore-card-image img {
+  transform: scale(1.1);
+}
+
+.explore-card-info {
+  width: 100%;
+}
+
+.product-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--samsung-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.explore-card-info h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  color: var(--samsung-black);
+}
+
+.product-price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--samsung-black);
+  margin-bottom: 1.5rem;
+}
+
+.color-swatches {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.explore-buy-btn {
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 12px;
+  background-color: var(--samsung-gray-100);
+  color: var(--samsung-black);
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.explore-card:hover .explore-buy-btn {
+  background-color: var(--samsung-black);
+  color: #fff;
+}
+
+/* Footer */
+.explore-footer {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.view-all-btn {
+  padding: 1.25rem 3.5rem;
+  border-radius: 50px;
+  background-color: transparent;
+  color: var(--samsung-black);
+  border: 2px solid var(--samsung-black);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: var(--samsung-black);
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .explore-store {
+    padding: 6rem 1.5rem;
+  }
+  
+  .explore-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .explore-card {
+    padding: 1.5rem;
+  }
+}

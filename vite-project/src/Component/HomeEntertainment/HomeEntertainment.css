@@ -1,0 +1,181 @@
+.entertainment-section {
+  padding: 8rem 4rem;
+  background-color: #fff;
+}
+
+.section-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.section-subtitle {
+  color: var(--samsung-blue);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.875rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--samsung-black);
+  margin-bottom: 1.5rem;
+  letter-spacing: -2px;
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  color: var(--samsung-gray-500);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Entertainment Grid */
+.entertainment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+/* Card Styling */
+.entertainment-card {
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  background-color: var(--samsung-gray-100);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.entertainment-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+}
+
+.ent-card-image {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.ent-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.entertainment-card:hover .ent-card-image img {
+  transform: scale(1.05);
+}
+
+.ent-tag {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  color: var(--samsung-black);
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+.ent-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 3rem;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.entertainment-card:hover .ent-overlay {
+  opacity: 1;
+}
+
+.ent-btn-primary, .ent-btn-secondary {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ent-btn-primary {
+  background-color: #fff;
+  color: #000;
+}
+
+.ent-btn-secondary {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+.ent-btn-primary:hover {
+  background-color: var(--samsung-blue);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Card Content */
+.ent-card-content {
+  padding: 2.5rem;
+  background-color: #fff;
+}
+
+.ent-card-content h3 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  color: var(--samsung-black);
+}
+
+.ent-card-content p {
+  font-size: 1rem;
+  color: var(--samsung-gray-500);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.ent-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--samsung-blue);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .entertainment-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .entertainment-section {
+    padding: 6rem 1.5rem;
+  }
+
+  .ent-card-image {
+    height: 350px;
+  }
+}

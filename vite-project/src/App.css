@@ -1,0 +1,73 @@
+.app {
+  width: 100%;
+}
+
+.main-content {
+  padding-top: var(--navbar-height);
+}
+
+.hero {
+  height: 90vh;
+  background-color: var(--samsung-gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -2px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  color: var(--samsung-gray-500);
+  margin-bottom: 2.5rem;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--samsung-black);
+  color: var(--samsung-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--samsung-blue);
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  border: 1px solid var(--samsung-black);
+  color: var(--samsung-black);
+}
+
+.btn-secondary:hover {
+  background-color: var(--samsung-gray-200);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .hero-cta {
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+}
